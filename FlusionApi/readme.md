@@ -32,3 +32,7 @@ Configuration du controller (Création des fichiers outputs). Formulaire pour sa
 ## Version 1.5
 
 Création du modèle pour les flux à recevoir.
+
+## Version 1.6
+
+Création migration pour la table flux_receive.
