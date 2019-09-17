@@ -5,3 +5,7 @@ Version de base du projet.
 ## Version 1.1
 
 Création du modèle pour les flux à envoyer.
+
+## Version 1.2
+
+Création migration pour la table flux_send.
