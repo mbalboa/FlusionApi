@@ -36,3 +36,7 @@ Création du modèle pour les flux à recevoir.
 ## Version 1.6
 
 Création migration pour la table flux_receive.
+
+## Version 1.7
+
+Ajout du controller pour les flux receive, enregistrement des données.

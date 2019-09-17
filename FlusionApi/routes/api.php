@@ -14,3 +14,4 @@ use Illuminate\Http\Request;
 */
 
 Route::resource('sendflux','Send',[ 'only'=>['index','show', 'store'] ]);
+Route::resource('receiveflux','Receive',[ 'only'=>['index','show', 'store'] ]);
