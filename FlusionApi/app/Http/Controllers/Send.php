@@ -67,6 +67,120 @@ class Send extends Controller
       $flux->Partage_Serveur = $request->Partage_Serveur;
 
       $flux->save();
+
+//Génération des fichiers
+
+      $idf=$_REQUEST['IDF'];
+      $name= $idf;
+      $name .= "_S";
+      $Send=fopen("$name.txt","w") or die ("Erreur lors de la création1");
+      $ParmSend=fopen("$idf.txt","w") or die ("Erreur lors de la création2");
+
+
+      $demande=$_REQUEST['Demande'];
+      $demandeur=$_REQUEST['Demandeur'];
+      $envrionnement=$_REQUEST['Environnement'];
+      $serveur=$_REQUEST['Serveur'];
+      $pivot=$_REQUEST['Pivot'];
+      $libelle_flux=$_REQUEST['Libelle_Flux'];
+      $repertoire=$_REQUEST['Repertoire'];
+      $fichier=$_REQUEST['Fichier'];
+      $partenaire=$_REQUEST['Partenaire'];
+      $nidf=$_REQUEST['NIDF'];
+      $nfname=$_REQUEST['NFNAME'];
+      $parm=$_REQUEST['PARM'];
+      $format=$_REQUEST['Format'];
+      $longueur=$_REQUEST['Longueur'];
+      $ftype=$_REQUEST['Ftype'];
+      $ntype=$_REQUEST['Ntype'];
+      $fcode=$_REQUEST['Fcode'];
+      $ncode=$_REQUEST['Ncode'];
+      $table_transco=$_REQUEST['Table_Transco'];
+      $fichier_vide=$_REQUEST['Fichier_Vide'];
+      $fichier_absent=$_REQUEST['Fichier_Absent'];
+      $suppr_fichier_source=$_REQUEST['Suppr_Fichier_Source'];
+      $concatenation=$_REQUEST['Concatenation'];
+      $rep_sauvegarde=$_REQUEST['Rep_Sauvegarde'];
+      $rep_temporarire=$_REQUEST['Rep_Temporaire'];
+      $partage_pivot=$_REQUEST['Partage_Pivot'];
+      $partage_serveur=$_REQUEST['Partage_Serveur'];
+
+
+      //Ecriture fichier Idf_Send
+      fwrite($Send,"/***************************************************************************************************/" . PHP_EOL);
+      fwrite($Send,"/* $idf                                                                                        */" . PHP_EOL);
+      fwrite($Send,"/*-------------------------------------------------------------------------------------------------*/" . PHP_EOL);
+      fwrite($Send,"/* Origine:   $serveur                                                                           */" . PHP_EOL);
+      fwrite($Send,"/* Cible:     $partenaire                                                                             */" . PHP_EOL);
+
+
+      $spa="";
+      for ($i = 1; $i <= 85-strlen($libelle_flux); $i++) {
+           $spa .= " ";
+      }
+      fwrite($Send,"/* Libellé:  $libelle_flux$spa*/" . PHP_EOL);
+
+
+      $spa="";
+      for ($i = 1; $i <= 85-strlen($demande); $i++) {
+           $spa .= " ";
+      }
+      fwrite($Send,"/* Demande:   $demande$spa*/" . PHP_EOL);
+
+
+      $spa="";
+      for ($i = 1; $i <= 85-strlen($demandeur); $i++) {
+           $spa .= " ";
+      }
+      fwrite($Send,"/* Demandeur: $demandeur$spa*/" . PHP_EOL);
+
+      fwrite($Send,"/***************************************************************************************************/" . PHP_EOL);
+      fwrite($Send, PHP_EOL);
+
+
+      fwrite($Send,"CFTSEND     ");
+      fwrite($Send,"ID       = " . $idf . "," . PHP_EOL);
+      fwrite($Send,"            Ftype    = " . $ftype . "," . PHP_EOL);
+      fwrite($Send,"            Ntype    = " . $ntype . "," . PHP_EOL);
+      fwrite($Send,"            Fcode    = " . $fcode . "," . PHP_EOL);
+      fwrite($Send,"            Ncode    = " . $ncode . "," . PHP_EOL);
+      fwrite($Send,"            XLATE    = " . $table_transco . "," . PHP_EOL);
+      fwrite($Send,"            FRECFM   = " . $format . "," . PHP_EOL);
+      fwrite($Send,"            FLRECL   = " . $longueur . "," . PHP_EOL);
+      fwrite($Send,"            Exec     = /data/" . $pivot . "/cft/scripts/opcon/CFTPS_ScriptProcCFT.ksh," . PHP_EOL);
+      fwrite($Send,"            Exece    = /data/" . $pivot . "/cft/scripts/opcon/CFTPS_ScriptProcCFT.ksh");
+      //Fin Ecriture fichier idf_send
+
+      //Ecriture fichier Parm_Send
+
+      fwrite($ParmSend,"IDF=" . $idf . PHP_EOL);
+      fwrite($ParmSend,"NIDF=" . $nidf . PHP_EOL);
+      fwrite($ParmSend,"PART=" . $partenaire . PHP_EOL);
+      fwrite($ParmSend,"PARM=" . $parm . PHP_EOL);
+      fwrite($ParmSend,"NFNAME=" . $nfname . PHP_EOL);
+      fwrite($ParmSend,"ENV_FIC_VIDE=" . $fichier_vide . PHP_EOL);
+      fwrite($ParmSend,"ERR_SI_ABSENT=" . $fichier_absent . PHP_EOL);
+      fwrite($ParmSend,"SUPP_FIC_SOURCE=" . $suppr_fichier_source . PHP_EOL);
+      fwrite($ParmSend,"CONCAT=" . $concatenation . PHP_EOL);
+      fwrite($ParmSend,"FICIN=" . $fichier . PHP_EOL);
+      fwrite($ParmSend,"FICEX=" . PHP_EOL);
+      fwrite($ParmSend,"REPIN=" . $repertoire . PHP_EOL);
+      fwrite($ParmSend,"REPSVG=" . $rep_sauvegarde . PHP_EOL);
+      fwrite($ParmSend,"REPTMP=" . $rep_temporarire . PHP_EOL);
+      fwrite($ParmSend,"REP_PIVOT=" . $partage_pivot . PHP_EOL);
+      fwrite($ParmSend,"REP_DIST=" . $partage_serveur);
+      //Fin Ecriture fichier parm_send
+
+      echo "Fichiers générés.";
+      /*
+      $connection = ssh2_connect('cft-ap-pkcftq05.ra1.intra.groupama.fr', 22);
+      ssh2_auth_password($connection, 'cft', 'cftsdr1');
+
+      ssh2_scp_send($connection, 'C:\xampp\htdocs\test4', '/data/pkcftq05/cft/idf/', 0644);
+
+      echo "Fichiers transférés";
+      */
+
     }
 
     /**

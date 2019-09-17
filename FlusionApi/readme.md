@@ -12,4 +12,8 @@ Création migration pour la table flux_send.
 
 ## Version 1.3
 
-Ajout du controller pour les flux send.
+Ajout du controller pour les flux send, enregistrement des données.
+
+## Version 1.4
+
+Configuration du controller (Création des fichiers outputs). Formulaire pour saisir les données.

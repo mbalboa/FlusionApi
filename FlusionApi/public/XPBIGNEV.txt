@@ -1,0 +1,16 @@
+IDF=XPBIGNEV
+NIDF=ffff
+PART=GAPGPM01
+PARM=fffff
+NFNAME=ffffff
+ENV_FIC_VIDE=O
+ERR_SI_ABSENT=O
+SUPP_FIC_SOURCE=O
+CONCAT=O
+FICIN=VIRCPT.txt*
+FICEX=
+REPIN=/data/pksapp04/sap_cr/interface/out
+REPSVG=/data/pksapp04/sap_cr/interface/svg
+REPTMP=/data/pksapp04/cft/WorkTmp
+REP_PIVOT=/data/share/cft/shrp01
+REP_DIST=/data/share/cft/shrp01
