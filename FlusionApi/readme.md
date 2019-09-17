@@ -9,3 +9,7 @@ Création du modèle pour les flux à envoyer.
 ## Version 1.2
 
 Création migration pour la table flux_send.
+
+## Version 1.3
+
+Ajout du controller pour les flux send.
