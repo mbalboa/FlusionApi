@@ -1,0 +1,22 @@
+/***************************************************************************************************/
+/* ggggggggggg                                                                                        */
+/*-------------------------------------------------------------------------------------------------*/
+/* Origine:   ggggggggg                                                                             */
+/* Cible:     gggggggggggg                                                                           */
+/* Libellé:  ggggggggggg                                                                          */
+/* Demande:   gggggggg                                                                             */
+/* Demandeur: ggggggggggggg                                                                        */
+/***************************************************************************************************/
+
+CFTIDF     ID       = ggggggggggg,
+            NIDF    = ggggggggggggg,
+            PART    = ggggggggg,
+            TYPE    = RECV
+
+CFTRECV     ID       = ggggggggggg,
+            Fname    = /data/pkcftq05/prod/tmp/&&idf_&&part_&&idt.txt,
+            Ftype    = T,
+            Fcode    = ASCII,
+            XLATE    = gggggggggggg,
+            Exec     = /data/pkcftq05/cft/scripts/opcon/CFTPS_ScriptProcCFT.ksh,
+            Exece    = /data/pkcftq05/cft/scripts/opcon/CFTPS_ScriptProcCFT.ksh

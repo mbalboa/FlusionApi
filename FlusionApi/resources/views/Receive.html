@@ -1,0 +1,360 @@
+<html>
+    <head>
+     <title>Receive Générateur</title>
+     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+     <div class="container-fluid">
+     	<button class="navbar-toggler" type="button" data-toggle="collapse"
+     	data-target="#navbarResponsive"
+     	<span class="navbar-toggler-icon"</span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarResponsive">
+     <ul class="navbar-nav ml-auto">
+         <li class="nav-item">
+           <a class="nav-link active" href="#">Receive</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="Send.html">Send</a>
+         </li>
+       </ul>
+     </div>
+     </div>
+     </nav>
+    </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <body>
+       <form action="http://127.0.0.1:8000/api/receiveflux" method="post" enctype='application/json' name="FlusionReceiveFormPost">
+
+         <div class="form-row">
+           <div class="col-1">
+
+           </div>
+   	        <div class="col-2">
+   	            <!-- 1st param -->
+   	            Demande:
+   	        </div>
+   	        <div class="col-2">
+
+   	            <input type="text" name="Demande" class="form-control">
+   	        </div>
+   					<div class="col-2">
+
+   	        </div>
+   					<div class="col-2">
+   	            <!-- 2nd param -->
+                 Demandeur:
+   	        </div>
+   	        <div class="col-2">
+
+   	            <input type="text" name="Demandeur" class="form-control">
+   	        </div>
+   					<div class="col-1">
+
+   					</div>
+   	    </div>
+
+
+
+        <div class="form-row">
+          <div class="col-1">
+
+          </div>
+  	        <div class="col-2">
+              <!-- 3rd param -->
+  	            Environnement:
+  	        </div>
+  	        <div class="col-2">
+                <select name="Environnement" class="form-control">
+                        <option>prod</option>
+                        <option>qual</option>
+                        <option>rec</option>
+                        <option>dev</option>
+                      </select>
+  	        </div>
+  					<div class="col-2">
+
+  	        </div>
+  					<div class="col-2">
+  	            <!-- 4th param -->
+  	            Serveur:
+  	        </div>
+  	        <div class="col-2">
+  	            <input class="form-control" type="text" name="Serveur">
+  	        </div>
+  					<div class="col-1">
+
+  	        </div>
+  	    </div>
+
+
+
+        <div class="form-row">
+          <div class="col-1">
+
+          </div>
+  					<div class="col-2">
+  							Pivot:
+  	        </div>
+  					<div class="col-2">
+              <select name="Pivot" class="form-control">
+                      <option>pkcftq05</option>
+                      <option>pkcftp05</option>
+                    </select>
+  	        </div>
+  					<div class="col-2">
+
+  	        </div>
+  	        <div class="col-2">
+  	            Libelle_Flux:
+  	        </div>
+  					<div class="col-2">
+  						<input type="text" name="Libelle_Flux" class="form-control">
+  	        </div>
+  					<div class="col-1">
+
+  	        </div>
+  	    </div>
+
+
+
+
+        <div class="form-row">
+          <div class="col-1">
+
+          </div>
+  					<div class="col-2">
+  							Repertoire:
+  	        </div>
+  					<div class="col-2">
+  	            <input type="text" name="Repertoire" class="form-control">
+  	        </div>
+  					<div class="col-2">
+
+  	        </div>
+  	        <div class="col-2">
+  	            Fichier:
+  	        </div>
+  					<div class="col-2">
+  						<input type="text" name="Fichier" class="form-control">
+  	        </div>
+  					<div class="col-1">
+
+  	        </div>
+  	    </div>
+
+
+
+        <div class="form-row">
+          <div class="col-1">
+
+          </div>
+  					<div class="col-2">
+  							Partenaire:
+  	        </div>
+  					<div class="col-2">
+  	            <input type="text" name="Partenaire" class="form-control">
+  	        </div>
+  					<div class="col-2">
+
+  	        </div>
+  	        <div class="col-2">
+  	            IDF:
+  	        </div>
+  					<div class="col-2">
+  						<input type="text" name="IDF" class="form-control">
+  	        </div>
+  					<div class="col-1">
+
+  	        </div>
+  	    </div>
+
+
+
+        <div class="form-row">
+          <div class="col-1">
+
+          </div>
+  					<div class="col-2">
+  							NIDF:
+  	        </div>
+  					<div class="col-2">
+  	            <input type="text" name="NIDF" class="form-control">
+  	        </div>
+  					<div class="col-2">
+
+  	        </div>
+            <div class="col-2">
+  	            Ftype:
+  	        </div>
+  					<div class="col-2">
+              <select name="Ftype" class="form-control">
+                      <option>T</option>
+                      <option>B</option>
+                    </select>
+  	        </div>
+  					<div class="col-1">
+
+  	        </div>
+  	    </div>
+
+
+
+        <div class="form-row">
+          <div class="col-1">
+
+          </div>
+          <div class="col-2">
+             Fcode:
+         </div>
+         <div class="col-2">
+            <select name="Fcode" class="form-control">
+                    <option>ASCII</option>
+                    <option>BINARY</option>
+                    <option>EBCDIC</option>
+                  </select>
+         </div>
+  					<div class="col-2">
+
+  	        </div>
+  	        <div class="col-2">
+  	            Table_Transco:
+  	        </div>
+  					<div class="col-2">
+  						<input type="text" name="Table_Transco" class="form-control">
+  	        </div>
+  					<div class="col-1">
+
+  	        </div>
+  	    </div>
+
+
+
+        <div class="form-row">
+          <div class="col-1">
+
+          </div>
+  					<div class="col-2">
+  							Remplacement_Fichier:
+  	        </div>
+  					<div class="col-2">
+              <select name="Remplacement_Fichier" class="form-control">
+                      <option>O</option>
+                      <option>N</option>
+                    </select>
+  	        </div>
+  					<div class="col-2">
+
+  	        </div>
+  	        <div class="col-2">
+  	            Fichier_Vide:
+  	        </div>
+  					<div class="col-2">
+              <select name="Fichier_Vide" class="form-control">
+                      <option>O</option>
+                      <option>N</option>
+                    </select>
+  	        </div>
+  					<div class="col-1">
+
+  	        </div>
+  	    </div>
+
+        <div class="form-row">
+          <div class="col-1">
+
+          </div>
+  					<div class="col-2">
+  							Rep_Flag:
+  	        </div>
+  					<div class="col-2">
+  	            <input type="text" name="Rep_Flag" class="form-control">
+  	        </div>
+  					<div class="col-2">
+
+  	        </div>
+  	        <div class="col-2">
+  	            Fichier_Flag:
+  	        </div>
+  					<div class="col-2">
+  						<input type="text" name="Fichier_Flag" class="form-control">
+  	        </div>
+  					<div class="col-1">
+
+  	        </div>
+  	    </div>
+
+
+
+        <div class="form-row">
+          <div class="col-1">
+
+          </div>
+  					<div class="col-2">
+  							Scedule:
+  	        </div>
+  					<div class="col-2">
+  	            <input type="text" name="Schedule" class="form-control">
+  	        </div>
+  					<div class="col-2">
+
+  	        </div>
+  	        <div class="col-2">
+  	            Job:
+  	        </div>
+  					<div class="col-2">
+  						<input type="text" name="Job" class="form-control">
+  	        </div>
+  					<div class="col-1">
+
+  	        </div>
+  	    </div>
+
+
+
+        <div class="form-row">
+          <div class="col-1">
+
+          </div>
+  					<div class="col-2">
+  							Rep_Sauvegarde:
+  	        </div>
+  					<div class="col-2">
+  	            <input type="text" name="Rep_Sauvegarde" class="form-control">
+  	        </div>
+  					<div class="col-2">
+
+  	        </div>
+  	        <div class="col-2">
+  	            Partage_Pivot:
+  	        </div>
+  					<div class="col-2">
+  						<input type="text" name="Partage_Pivot" class="form-control">
+  	        </div>
+  					<div class="col-1">
+
+  	        </div>
+  	    </div>
+
+
+
+        <div class="form-row">
+          <div class="col-1">
+
+          </div>
+  					<div class="col-2">
+  							Partage_Serveur:
+  	        </div>
+  					<div class="col-2">
+  	            <input type="text" name="Partage_Serveur" class="form-control">
+  	        </div>
+  					<div class="col-7">
+
+  	        </div>
+
+  	    </div>
+
+
+        <center>  <input type="submit" class="btn btn-success" value="Submit"> </center>
+
+       </form>
+    </body>
+   </html>

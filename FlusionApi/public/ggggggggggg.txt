@@ -1,0 +1,13 @@
+IDF= ggggggggggg
+SERVEUR= gggggggggggg
+REP_SAMBA_PIVOT= gggggggggg
+REP_SAMBA_DIST= gggggggggg
+REP_SVG= ggggggggggggg
+REP_FLAG= gggggggggggg
+NOM_FLAG_APPL= gggggggggggggg
+REP_APPL= ggggggggggg
+NOM_FIC_APPL= gggggggggggg
+REPLACE_FIC_APPL= O
+TRAITE_FIC_VIDE= O
+NOM_SCHED= gggggggggggg
+NOM_JOB= gggggggggggggg

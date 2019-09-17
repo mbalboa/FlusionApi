@@ -27,7 +27,7 @@ Ajout du controller pour les flux send, enregistrement des données.
 
 ## Version 1.4
 
-Configuration du controller (Création des fichiers outputs). Formulaire pour saisir les données.
+Configuration du controller (Création des fichiers outputs send). Formulaire pour saisir les données.
 
 ## Version 1.5
 
@@ -40,3 +40,7 @@ Création migration pour la table flux_receive.
 ## Version 1.7
 
 Ajout du controller pour les flux receive, enregistrement des données.
+
+## Version 1.8
+
+Configuration du controller (Création des fichiers outputs receive). Formulaire pour saisir les données.
