@@ -118,7 +118,7 @@ class Send extends Controller
       for ($i = 1; $i <= 85-strlen($libelle_flux); $i++) {
            $spa .= " ";
       }
-      fwrite($Send,"/* Libellé:  $libelle_flux$spa*/" . PHP_EOL);
+      fwrite($Send,"/* Libellé:   $libelle_flux$spa*/" . PHP_EOL);
 
 
       $spa="";

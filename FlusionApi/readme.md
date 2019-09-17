@@ -1,3 +1,14 @@
+Programmes requis:
+
+-
+-
+-
+
+Commandes:
+
+composer global require laravel/installer
+composer create-project --prefer-dist laravel/laravel blog
+
 ## Version 1.0
 
 Version de base du projet.
@@ -17,3 +28,7 @@ Ajout du controller pour les flux send, enregistrement des données.
 ## Version 1.4
 
 Configuration du controller (Création des fichiers outputs). Formulaire pour saisir les données.
+
+## Version 1.5
+
+Création du modèle pour les flux à recevoir.
