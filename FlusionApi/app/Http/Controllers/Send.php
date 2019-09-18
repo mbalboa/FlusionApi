@@ -172,14 +172,7 @@ class Send extends Controller
       //Fin Ecriture fichier parm_send
 
       echo "Fichiers générés.";
-      /*
-      $connection = ssh2_connect('cft-ap-pkcftq05.ra1.intra.groupama.fr', 22);
-      ssh2_auth_password($connection, 'cft', 'cftsdr1');
 
-      ssh2_scp_send($connection, 'C:\xampp\htdocs\test4', '/data/pkcftq05/cft/idf/', 0644);
-
-      echo "Fichiers transférés";
-      */
 
     }
 

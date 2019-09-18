@@ -167,13 +167,6 @@ class Receive extends Controller
 
       //Fin Ecriture fichier parm_Receive
 
-
-      /*
-      $connection = ssh2_connect('10.205.196.135', 22);
-      ssh2_auth_password($connection, 'cft', 'cftsdr1');
-
-      ssh2_scp_Receive($connection, 'C:\xampp\htdocs\testttt', '/', 0644);*/
-
       echo "Fichiers créer parfaitement.";
 
     }
